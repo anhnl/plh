@@ -1,6 +1,6 @@
 var app = angular.module('plh', []);
 app.controller('indexController', function($scope, $http) {
-  $scope.sections = {
+  $scope.topSections = {
     'trading':{
       'name':'For Sale',
       'subs':[
@@ -75,7 +75,9 @@ app.controller('indexController', function($scope, $http) {
           'link':'/jobs/tutoring'
         }
       ]
-    },
+    }
+  };
+  $scope.bottomSections = {
     'volunteering':{
       'name':'Volunteer',
       'subs':[

@@ -27,25 +27,32 @@
 </head>
 <body>
 <div ng-app="plh" ng-controller="indexController" class="container">
-	<section class="welcome container-fluid">
+	<section class="container-fluid">
 	  <div class="col-md-12 row">
-	    <div class="featured info col-md-2">
-	      <div class="featured-sites">
-	        <h2>PLH</h2>
-	        <p>
-	        Free ad posting here.
-	        </p>
-	      </div>
+	    <div class="col-md-2">
+	      <h2>PLH</h2>
+	      <p>Free ad posting here.</p>
 	    </div>
-	    <div class="featured col-md-9 col-md-offset-1">
-	      <div class="featured-sites">
-	        <h2>Sections</h2>
-	        <div class="col-md-4 row" ng-repeat="section in sections">
+	    <div class="col-md-9 col-md-offset-1">
+	    	<div class="row">
+	    		<h2>Sections</h2>
+	    	</div>
+        <div class="row">
+	        <div class="col-md-4 row" ng-repeat="section in topSections">
 	          <h4>{{section.name}}</h4>
 	          <ul ng-repeat="sub in section.subs">
 	            <li><a href="{{sub.link}}">{{ sub.name }}</a></li>
 	          </ul>
-	          <hr>
+	          <br>
+	        </div>
+	      </div>
+        <div class="row">
+	        <div class="col-md-4 row" ng-repeat="section in bottomSections">
+	          <h4>{{section.name}}</h4>
+	          <ul ng-repeat="sub in section.subs">
+	            <li><a href="{{sub.link}}">{{ sub.name }}</a></li>
+	          </ul>
+	          <br>
 	        </div>
 	      </div>
 	    </div>
