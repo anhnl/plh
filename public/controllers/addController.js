@@ -1,5 +1,5 @@
-var addCtrl = angular.module('addCtrl', ['geolocation']);
-addCtrl.controller('addCtrl', function($scope, $http, geolocation) {
+var addController = angular.module('addController', ['geolocation']);
+addController.controller('addController', function($scope, $http, geolocation) {
 
 	$scope.formData = {};
 	var coords = {};
