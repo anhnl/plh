@@ -1,68 +1,41 @@
-<!doctype html>
-<!-- Declares meanMapApp as the starting Angular module -->
-<html class="no-js">
-<head>
-  <meta charset="utf-8">
-  <title>PLH</title>
-  <meta name="description" content="Post your ads here, free!">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- CSS -->
-  <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css"/>
-  <link rel="stylesheet" href="style.css"/>
-  <!-- Holder JS -->
-  <script src="../bower_components/holderjs/holder.js"></script>
-  <!-- Google Maps API -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWzWXTmQHUU3OHr2bKeRUn4dNE5PUtpxk"></script>
-  <!-- Modernizr -->
-  <script src="../bower_components/modernizr/bin/modernizr"></script>
-  <!-- JS Source -->
-  <script src="../bower_components/jquery/jquery.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-  <script src="../bower_components/angular-route/angular-route.js"></script>
-  <script src="../bower_components/angularjs-geolocation/dist/angularjs-geolocation.min.js"></script>
-  <!-- Angular Scripts -->
-  <script src="controllers/app.js"></script>
-  <script src="controllers/addController.js"></script>
-  <script src="controllers/indexController.js"></script>
-</head>
-<body>
-<div ng-app="plh" ng-controller="indexController" class="container">
-	<section class="container-fluid">
-	  <div class="col-md-12 row">
-	    <div class="col-md-2">
-	      <h2>PLH</h2>
-	      <p>Free ad posting here.</p>
-	    </div>
-	    <div class="col-md-9 col-md-offset-1">
-	    	<div class="row">
-	    		<h2>Sections</h2>
-	    	</div>
-        <div class="row">
-	        <div class="col-md-4 row" ng-repeat="section in topSections">
-	          <h4>{{section.name}}</h4>
-	          <ul ng-repeat="sub in section.subs">
-	            <li><a href="{{sub.link}}">{{ sub.name }}</a></li>
-	          </ul>
-	          <br>
-	        </div>
-	      </div>
-        <div class="row">
-	        <div class="col-md-4 row" ng-repeat="section in bottomSections">
-	          <h4>{{section.name}}</h4>
-	          <ul ng-repeat="sub in section.subs">
-	            <li><a href="{{sub.link}}">{{ sub.name }}</a></li>
-	          </ul>
-	          <br>
-	        </div>
-	      </div>
-	    </div>
-	  </div>
-	</section>
-	<hr/>
-  <!-- Footer -->
-  <div class="footer">
-	  <p class="text-center"><span class="glyphicon glyphicon-check"></span> Created by Anh Luong - <a href="https://github.com/anhnl/plh">Github Repo</a></p>
-  </div>
-</div>
-</body>
+<!DOCTYPE html>
+<html class="no-js" ng-app="plhApp">
+  <head>
+    <meta charset="utf-8">
+    <title>PLH</title>
+    <meta name="description" content="Post your ads here, free!">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <!-- Google Maps API -->
+    <script type="text/javascript" rel="javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWzWXTmQHUU3OHr2bKeRUn4dNE5PUtpxk"></script>
+    <!-- JS Source -->
+    <script type="text/javascript" rel="javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script type="text/javascript" rel="javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28//angular-route.min.js"></script>
+    <script type="text/javascript" rel="javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <section class="container-fluid">
+        <div class="col-md-12 row">
+          <div class="col-md-2">
+            <h2>PLH</h2>
+            <p>Free ad posting here.</p>
+            <ul class="nav">
+              <li><a href="#/"> Home </a></li>
+              <li><a href="#add"> Create a Listing </a></li>
+            </ul>
+          </div>
+          <div ng-view></div>
+        </div>
+      </section>
+    </div>
+        <!-- Angular Scripts -->
+    <script type="text/javascript" rel="javascript" src="controllers/addController.js"></script>
+    <script type="text/javascript" rel="javascript" src="controllers/homeController.js"></script>
+    <script type="text/javascript" rel="javascript" src="app.js"></script>
+  </body>
 </html>

@@ -1,0 +1,23 @@
+<div ng-controller="homeController" class="col-md-9 col-md-offset-1">
+  <div class="row">
+    <h2>Sections</h2>
+  </div>
+  <div class="row">
+    <div class="col-md-4 row" ng-repeat="section in topSections">
+      <h4>{{section.name}}</h4>
+      <ul ng-repeat="sub in section.subs">
+        <li><a href="{{sub.link}}">{{ sub.name }}</a></li>
+      </ul>
+      <br>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4 row" ng-repeat="section in bottomSections">
+      <h4>{{section.name}}</h4>
+      <ul ng-repeat="sub in section.subs">
+        <li><a href="{{sub.link}}">{{ sub.name }}</a></li>
+      </ul>
+      <br>
+    </div>
+  </div>
+</div>
