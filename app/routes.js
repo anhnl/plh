@@ -1,25 +1,29 @@
 var mongoose = require('mongoose');
-var User = require('./model.js');
+var Post = require('./model.js');
 
 module.exports = function(app) {
-	app.get('/users', function(req, res) {
+	app.get('/postings', function(req, res) {
 
-		var query = User.find({});
-		query.exec(function(err, users) {
+		var query = Post.find({});
+		query.exec(function(err, posts) {
 			if (err)
 				res.send(err);
-			res.json(users);
+			res.json(posts);
 		});
 	});
 
-	app.post('/users', function(req, res) {
+	app.post('/postings', function(req, res) {
 
-		var newuser = new User(req.body);
+		var newPost = new Post(req.body);
 
-		newuser.save(function(err) {
-			if (err)
+		newPost.save(function(err) {
+			if (err) {
+				console.log("Logged error: Could not save to postings.");
 				res.send(err);
+			}
 			res.json(req.body);
+			res.redirect("/posts");
+			console.log("Logged activity: Saved Post to postings.");
 		});
 	});
 };

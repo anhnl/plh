@@ -2,31 +2,38 @@ angular.module('plhApp.addController', [])
 	.controller('addController', function($scope, $http) {
 
 		$scope.formData = {};
-		var coords = {};
-		var lat = 0;
-		var long = 0;
 
-		// Set initial coordinates to the center of the US
-		$scope.formData.latitude = 39.500;
-		$scope.formData.longitude = -98.350;
+		$scope.createPost = function() {
 
-		$scope.createUser = function() {
-
-			var userData = {
-				username: $scope.formData.username,
-				gender: $scope.formData.gender,
-				age: $scope.formData.age,
-				favlang: $scope.formData.favlang,
-				location: [$scope.formData.longitude, $scope.formData.latitude],
-				htmlverified: $scope.formData.htmlverified
+			var postData = {
+				name: $scope.formData.name,
+				email: $scope.formData.email,
+				phone: $scope.formData.phone,
+				city: $scope.formData.city,
+				location: $scope.formData.location,
+				price: $scope.formData.price,
+				condition: $scope.formData.condition,
+				make: $scope.formData.make,
+				size: $scope.formData.size,
+				title: $scope.formData.title,
+				color: $scope.formData.color,
+				posting: $scope.formData.posting
 			};
 
-			$http.post('/users', userData)
+			$http.post('/postings', postData)
 				.success(function (data) {
-					$scope.formData.username = "";
-					$scope.formData.gender = "";
-					$scope.formData.age = "";
-					$scope.formData.favlang = "";
+					$scope.formData.name = "";
+					$scope.formData.email = "";
+					$scope.formData.phone = "";
+					$scope.formData.city = "";
+					$scope.formData.location = "";
+					$scope.formData.price = "";
+					$scope.formData.condition = "";
+					$scope.formData.make = "";
+					$scope.formData.size = "";
+					$scope.formData.title = "";
+					$scope.formData.color = "";
+					$scope.formData.posting = "";
 				})
 				.error(function (data) {
 					console.log('Error: ' + data);

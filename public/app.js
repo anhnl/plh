@@ -1,4 +1,4 @@
-var plhApp = angular.module('plhApp', ['ngRoute', 'plhApp.homeController']);
+var plhApp = angular.module('plhApp', ['ngRoute', 'plhApp.homeController', 'plhApp.addController', 'plhApp.postsController']);
 
 plhApp.config(['$routeProvider',
   function($routeProvider) {
@@ -11,6 +11,10 @@ plhApp.config(['$routeProvider',
     		templateUrl: 'templates/add.html',
     		controller: 'addController'
     	}).
+      when('/posts', {
+        templateUrl: 'templates/posts.html',
+        controller: 'postsController'
+      }).
 	    otherwise({
 	      redirectTo: '/'
 	    });

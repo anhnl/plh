@@ -1,5 +1,5 @@
 {
-    "name": "MeanMapsApp",
+    "name": "PLH",
     "main": "server.js",
     "dependencies" : {
         "express": "~4.13.1",
