@@ -1,95 +1,93 @@
-<div class="col-md-9 col-md-offset-1">
-  <div class="row">
-    <h2>Create a Listing</h2>
-  </div>
-  <form name="addPost">
-    <div class="row">
-      <h4>Contact Details</h4>
-      <div class="col-md-4">
-        <fieldset class="form-group">
-          <label for="name">Name</label>
-          <input type="text" class="form-control" id="name" placeholder="Your contact name" ng-model="formData.name" aria-describedby="name">
-        </fieldset>
-      </div>
-      <div class="col-md-4">
-        <fieldset class="form-group">
-          <label for="email">Email</label>
-          <input type="email" class="form-control" id="email" placeholder="Your contact email address" ng-model="formData.email" aria-describedby="email" required>
-        </fieldset>
-      </div>
-      <div class="col-md-4">
-        <fieldset class="form-group">
-          <label for="phone">Phone</label>
-          <input type="text" class="form-control" id="phone" placeholder="Your contact phone number" ng-model="formData.phone" aria-describedby="phone">
-        </fieldset>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-4">
-        <fieldset class="form-group">
-          <label for="city">City</label>
-          <input type="text" class="form-control" id="city" placeholder="General meeting location" aria-describedby="city" ng-model="formData.city" required>
-        </fieldset>
-      </div>
-      <div class="col-md-4">
-        <fieldset class="form-group">
-          <label for="location">General Location</label>
-          <input type="text" class="form-control" id="location" placeholder="General meeting location" ng-model="formData.location" aria-describedby="location">
-        </fieldset>
-      </div>
-    </div>
-    <div class="row">
-      <h4>Item Details</h4>
-      <div class="col-md-4">
-        <fieldset class="form-group">
-          <label for="price">Price</label>
-          <input type="text" class="form-control" id="price" placeholder="Asking price" ng-model="formData.price" aria-describedby="price">
-        </fieldset>
-      </div>
-      <div class="col-md-4">
-        <fieldset class="form-group">
-          <label for="condition">Condition</label>
-          <input type="text" class="form-control" id="condition" placeholder="Condition of the item" ng-model="formData.condition" aria-describedby="condition">
-        </fieldset>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-4">
-        <fieldset class="form-group">
-          <label for="make">Make/Manufacturer</label>
-          <input type="text" class="form-control" id="make" placeholder="Make/Manufacturer of the item" ng-model="formData.make" aria-describedby="make">
-        </fieldset>
-      </div>
-      <div class="col-md-4">
-        <fieldset class="form-group">
-          <label for="size">Size</label>
-          <input type="text" class="form-control" id="size" placeholder="Size of the item" ng-model="formData.size" aria-describedby="size">
-        </fieldset>
-      </div>
-      <div class="col-md-4">
-        <fieldset class="form-group">
-          <label for="color">Color</label>
-          <input type="text" class="form-control" id="color" placeholder="Color of the item" ng-model="formData.color" aria-describedby="color">
-        </fieldset>
-      </div>
-    </div>
-    <div class="row">
-      <h4>Posting</h4>
-      <div class="col-md-12">
-        <fieldset class="form-group">
-          <label for="title">Title</label>
-          <input type="text" class="form-control" id="title" placeholder="Title" ng-model="formData.title" aria-describedby="title" required>
-        </fieldset>
-        <fieldset class="form-group">
-          <label for="posting">Posting</label>
-          <textarea rows="6" class="form-control" id="posting" placeholder="Describe what you're posting about" ng-model="formData.posting" aria-describedby="posting" required></textarea>
-        </fieldset>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12">
-        <button type="submit" class="btn btn-primary btn-block" ng-click="createPost()" ng-disabled="addPost.$invalid">Submit</button>
-      </div>
-    </div>
-  </form>
+<div class="row">
+  <h2>Create a Listing</h2>
 </div>
+<form name="addPost">
+  <div class="row">
+    <h4>Contact Details</h4>
+    <div class="col-md-4">
+      <fieldset class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" placeholder="Your contact name" ng-model="formData.name" aria-describedby="name">
+      </fieldset>
+    </div>
+    <div class="col-md-4">
+      <fieldset class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" placeholder="Your contact email address" ng-model="formData.email" aria-describedby="email" required>
+      </fieldset>
+    </div>
+    <div class="col-md-4">
+      <fieldset class="form-group">
+        <label for="phone">Phone</label>
+        <input type="text" class="form-control" id="phone" placeholder="Your contact phone number" ng-model="formData.phone" aria-describedby="phone">
+      </fieldset>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <fieldset class="form-group">
+        <label for="city">City</label>
+        <input type="text" class="form-control" id="city" placeholder="General meeting location" aria-describedby="city" ng-model="formData.city" required>
+      </fieldset>
+    </div>
+    <div class="col-md-4">
+      <fieldset class="form-group">
+        <label for="location">General Location</label>
+        <input type="text" class="form-control" id="location" placeholder="General meeting location" ng-model="formData.location" aria-describedby="location">
+      </fieldset>
+    </div>
+  </div>
+  <div class="row">
+    <h4>Item Details</h4>
+    <div class="col-md-4">
+      <fieldset class="form-group">
+        <label for="price">Price</label>
+        <input type="text" class="form-control" id="price" placeholder="Asking price" ng-model="formData.price" aria-describedby="price">
+      </fieldset>
+    </div>
+    <div class="col-md-4">
+      <fieldset class="form-group">
+        <label for="condition">Condition</label>
+        <input type="text" class="form-control" id="condition" placeholder="Condition of the item" ng-model="formData.condition" aria-describedby="condition">
+      </fieldset>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <fieldset class="form-group">
+        <label for="make">Make/Manufacturer</label>
+        <input type="text" class="form-control" id="make" placeholder="Make/Manufacturer of the item" ng-model="formData.make" aria-describedby="make">
+      </fieldset>
+    </div>
+    <div class="col-md-4">
+      <fieldset class="form-group">
+        <label for="size">Size</label>
+        <input type="text" class="form-control" id="size" placeholder="Size of the item" ng-model="formData.size" aria-describedby="size">
+      </fieldset>
+    </div>
+    <div class="col-md-4">
+      <fieldset class="form-group">
+        <label for="color">Color</label>
+        <input type="text" class="form-control" id="color" placeholder="Color of the item" ng-model="formData.color" aria-describedby="color">
+      </fieldset>
+    </div>
+  </div>
+  <div class="row">
+    <h4>Posting</h4>
+    <div class="col-md-12">
+      <fieldset class="form-group">
+        <label for="title">Title</label>
+        <input type="text" class="form-control" id="title" placeholder="Title" ng-model="formData.title" aria-describedby="title" required>
+      </fieldset>
+      <fieldset class="form-group">
+        <label for="posting">Posting</label>
+        <textarea rows="6" class="form-control" id="posting" placeholder="Describe what you're posting about" ng-model="formData.posting" aria-describedby="posting" required></textarea>
+      </fieldset>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <button type="submit" class="btn btn-primary btn-block" ng-click="createPost()" ng-disabled="addPost.$invalid">Submit</button>
+    </div>
+  </div>
+</form>

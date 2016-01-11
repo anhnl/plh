@@ -15,15 +15,12 @@ module.exports = function(app) {
 	app.post('/postings', function(req, res) {
 
 		var newPost = new Post(req.body);
-
 		newPost.save(function(err) {
 			if (err) {
-				console.log("Logged error: Could not save to postings.");
-				res.send(err);
+				return res.redirect('#posts');
+			} else {
+				return res.redirect('#posts');
 			}
-			res.json(req.body);
-			res.redirect("/posts");
-			console.log("Logged activity: Saved Post to postings.");
 		});
 	});
 };

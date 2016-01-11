@@ -1,11 +1,9 @@
-<div class="col-md-9 col-md-offset-1">
-  <div class="row">
-    <h2>Postings</h2>
-  </div>
-  <div class="row">
-    <div class="col-md-12 row" ng-repeat="post in posts">
-      <h5>{{post.updated_at | date: 'medium'}} - {{post.title}}</h5>
-      <p>{{post.posting}}</p>
-    </div>
+<div class="row">
+  <h2 class="pull-left">Postings</h2>
+</div>
+<div class="row">
+  <div class="col-md-12 row" ng-repeat="post in posts | orderBy:'-updated_at' | filter:query">
+    <h5>{{post.updated_at | date: 'medium'}} - {{post.title}} - {{post.city}}</h5>
+    <p>{{post.posting}}</p>
   </div>
 </div>

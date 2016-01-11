@@ -21,16 +21,23 @@
     <div class="container">
       <section class="container-fluid">
         <div class="col-md-12 row">
-          <div class="col-md-2">
+          <div class="col-md-3">
             <h2>PLH</h2>
-            <p>Free ad posting here.</p>
+            <h4>Free ad posting here!</h4>
             <ul class="nav">
               <li><a href="#/"> Home </a></li>
               <li><a href="#add"> Create a listing </a></li>
               <li><a href="#posts"> View all posts </a></li>
+              <br>
+              <div class="input-group">
+                <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
+                <input type="text" class="form-control" ng-model="query" placeholder="Search...">
+              </div>
             </ul>
           </div>
-          <div ng-view></div>
+          <div class="col-md-8 col-md-offset-1">
+            <div ng-view></div>
+          </div>
         </div>
       </section>
     </div>
