@@ -25,7 +25,7 @@ app.use(methodOverride());
 
 // Routes
 // ------------------------------------------------------
-require('./app/routes.js')(app);
+require('./routes.js')(app);
 
 // Listen
 // -------------------------------------------------------

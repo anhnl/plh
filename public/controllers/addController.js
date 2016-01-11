@@ -36,7 +36,7 @@ angular.module('plhApp.addController', [])
 					$scope.formData.posting = "";
 				})
 				.error(function (data) {
-					console.log('Error: ' + data);
+					console.log('Error in addController: ' + data);
 				});
 		};
 	});
