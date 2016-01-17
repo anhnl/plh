@@ -17,10 +17,7 @@ mongoose.connect(uri, options);
 
 // Logging and Parsing
 app.use(express.static(__dirname + '/public'));                 // sets the static files location to public
-app.use('/controllers', express.static(__dirname + '/public/controllers'));
-app.use('/css', express.static(__dirname + '/public/css'));
-app.use('/templates', express.static(__dirname + '/public/templates'));
-
+app.use('/bower_components',  express.static(__dirname + '/bower_components')); // Use BowerComponents
 app.use(morgan('dev'));                                         // log with Morgan
 app.use(bodyParser.json());                                     // parse application/json
 app.use(bodyParser.urlencoded({extended: true}));               // parse application/x-www-form-urlencoded

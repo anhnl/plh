@@ -1,17 +1,17 @@
 <div class="row">
   <div class="col-md-4 row" ng-repeat="section in topSections">
-    <h4>{{section.name}}</h4>
+    <h4>{{ section.name | translate }}</h4>
     <ul ng-repeat="sub in section.subs">
-      <li><a href="{{sub.link}}">{{ sub.name }}</a></li>
+      <li><a href="{{sub.link}}">{{ sub.name | translate }}</a></li>
     </ul>
     <br>
   </div>
 </div>
 <div class="row">
   <div class="col-md-4 row" ng-repeat="section in bottomSections">
-    <h4>{{section.name}}</h4>
+    <h4>{{section.name | translate }}</h4>
     <ul ng-repeat="sub in section.subs">
-      <li><a href="{{sub.link}}">{{ sub.name }}</a></li>
+      <li><a href="{{sub.link}}">{{ sub.name | translate }}</a></li>
     </ul>
     <br>
   </div>

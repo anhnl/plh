@@ -8,6 +8,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"/>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="bower_components/flag-icon-css/css/flag-icon.min.css">
     <link rel="stylesheet" href="css/style.css"/>
     <!-- Google Maps API -->
     <script type="text/javascript" rel="javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWzWXTmQHUU3OHr2bKeRUn4dNE5PUtpxk"></script>
@@ -17,6 +18,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
     <script type="text/javascript" rel="javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="bower_components/angular-translate/angular-translate.js"></script>
     <script>
       $(function() {
         $( "#calendar" ).datepicker();
@@ -63,8 +65,8 @@
             <li class="dropdown">
               <a href="!" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Language <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="#en">English</a></li>
-                <li><a href="#vnm">Vietnamese</a></li>
+                <li><a href ng-controller="homeController" ng-click="changeLanguage('en')">English <span class="flag-icon flag-icon-us"></span></a></li>
+                <li><a href ng-controller="homeController" ng-click="changeLanguage('vnm')">Vietnamese <span class="flag-icon flag-icon-vn"></span></a></li>
               </ul>
             </li>
           </ul>
@@ -76,9 +78,9 @@
       <div class="col-md-2">
         <div class="bs-sidebar hidden-print affix well well-lg">
           <ul class="left-sidebar-nav nav nav-list">
-            <li><a href="/add">Create a listing</a></li>
-            <li><a href="/posts">View all posts</a></li>
-            <li><a href="/calendar">Calendar</a></li>
+            <li><a href="#add">Create a listing</a></li>
+            <li><a href="#posts">View all posts</a></li>
+            <li><a href="#calendar">Calendar</a></li>
             <li>
               <div id="calendar"></div>
             </li>
@@ -92,7 +94,6 @@
     <!-- Angular Scripts -->
     <script type="text/javascript" rel="javascript" src="controllers/addController.js"></script>
     <script type="text/javascript" rel="javascript" src="controllers/homeController.js"></script>
-    <script type="text/javascript" rel="javascript" src="controllers/homeVnmController.js"></script>
     <script type="text/javascript" rel="javascript" src="controllers/postsController.js"></script>
     <script type="text/javascript" rel="javascript" src="controllers/viewController.js"></script>
     <script type="text/javascript" rel="javascript" src="app.js"></script>

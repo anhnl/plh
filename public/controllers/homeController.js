@@ -1,77 +1,80 @@
 angular.module('plhApp.homeController', [])
-  .controller('homeController', function($scope, $http) {
+  .controller('homeController', function($scope, $http, $translate) {
+    $scope.changeLanguage = function (key) {
+      $translate.use(key);
+    };
     $scope.topSections = {
       'trading':{
-        'name':'For Sale',
+        'name':'FOR_SALE',
         'subs':[
           {
-            'name': 'Fashion',
+            'name': 'FASHION',
             'link': '/sale/fashion'
           }, {
-            'name':'Electronics',
+            'name':'ELECTRONICS',
             'link':'/sale/electronics'
           }, {
-            'name':'Video Games',
+            'name':'VIDEO_GAMES',
             'link':'/sale/games'
           }, {
-            'name':'Vintage',
+            'name':'VINTAGE',
             'link':'/sale/vintage'
           }, {
-            'name':'Books',
+            'name':'BOOKS',
             'link':'/sale/books'
           }, {
-            'name':'Musical Instruments',
+            'name':'MUSICAL_INSTRUMENTS',
             'link':'/sale/musical_instruments',
           }, {
-            'name':'Music',
+            'name':'MUSIC',
             'link':'/sale/music'
           }, {
-            'name':'Transportation',
+            'name':'TRANSPORTATIONS',
             'link':'/sale/vehicles'
           }
         ]
       },
       'renting':{
-        'name':'For Rent',
+        'name':'FOR_RENT',
         'subs':[
           {
-            'name': 'House',
+            'name': 'HOUSE',
             'link': '/rent/house'
           }, {
-            'name':'Apartment',
+            'name':'APARTMENT',
             'link':'/rent/apartment'
           }, {
-            'name':'Room for Rent',
+            'name':'ROOM_FOR_RENT',
             'link':'/rent/room'
           }, {
-            'name':'Office Space',
+            'name':'OFFICE_SPACE',
             'link':'/rent/office'
           }, {
-            'name':'Freelance Space',
+            'name':'FREELANCE_SPACE',
             'link':'/rent/freelance'
           }, {
-            'name':'General Purpose',
+            'name':'GENERAL_PURPOSE_SPACE',
             'link':'/rent/general'
           }, {
-            'name':'Selling Slot',
+            'name':'SELLING_SPACE',
             'link':'/rent/selling_slot'
           }
         ]
       },
       'jobs':{
-        'name':'Jobs',
+        'name':'JOBS',
         'subs':[
           {
-            'name': 'Hiring',
+            'name': 'HIRING',
             'link': '/jobs/hiring'
           }, {
-            'name':'Temporary/Seasonal',
+            'name':'TEMPORARY_SEASONAL',
             'link':'/jobs/temporary'
           }, {
-            'name':'Assisting',
-            'link':'/jobs/assisting'
+            'name':'ASSISTS',
+            'link':'/jobs/assists'
           }, {
-            'name':'Tutoring',
+            'name':'TUTORING',
             'link':'/jobs/tutoring'
           }
         ]
@@ -79,40 +82,40 @@ angular.module('plhApp.homeController', [])
     };
     $scope.bottomSections = {
       'volunteering':{
-        'name':'Volunteer',
+        'name':'VOLUNTEER',
         'subs':[
           {
-            'name': 'Long-term',
+            'name': 'LONG_TERM',
             'link': '/volunteer/long_term'
           }, {
-            'name':'Temporary',
+            'name':'TEMPORARY',
             'link':'/volunteer/temporary'
           }
         ]
       },
       'lostandfound':{
-        'name':'Lost and Found',
+        'name':'LOST_FOUND',
         'subs':[
           {
-            'name': 'General',
+            'name': 'GENERAL_LOST_FOUND',
             'link': '/lost/general'
           }, {
-            'name':'Pets',
+            'name':'PETS_LOST_FOUND',
             'link':'/lost/pets'
           }, {
-            'name':'Vehicles',
+            'name':'VEHICLES_LOST_FOUND',
             'link':'/lost/vehicles'
           }
         ]
       },
       'travel':{
-        'name':'Travel',
+        'name':'TRAVEL',
         'subs':[
           {
-            'name': 'Place to Stay',
+            'name': 'PLACE_TO_STAY',
             'link': '/travel/stay'
           }, {
-            'name':'Traveling Partners',
+            'name':'TRAVEL_PARTNERS',
             'link':'/travel/partners'
           }
         ]
