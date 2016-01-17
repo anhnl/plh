@@ -1,0 +1,27 @@
+.ui-datepicker-inline {
+	width: 160px!important;
+	background-color: #fff;
+}
+
+.ui-datepicker-header {
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 10px;
+}
+
+table.ui-datepicker-calendar {
+	width: 100px!important;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 10px;
+}
+
+table.ui-datepicker-calendar td{
+	background-color: #fff;
+}
+
+a.navbar-brand {
+	margin-left: 150px;
+}
+
+.post-title {
+	font-size: 20px;
+}

@@ -7,8 +7,18 @@ module.exports = function(app) {
 		var query = Post.find({});
 		query.exec(function(err, posts) {
 			if (err)
-				res.send(err);
+				return res.send(err);
 			res.json(posts);
+		});
+	});
+
+	app.get('/postings/:id', function(req, res) {
+
+		var query = Post.find({_id: req.params.id});
+		query.exec(function(err, post) {
+			if (err)
+				return res.send(err);
+			res.json(post);
 		});
 	});
 

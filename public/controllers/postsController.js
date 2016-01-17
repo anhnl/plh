@@ -3,6 +3,7 @@ angular.module('plhApp.postsController', [])
 
 		$scope.list = function() {
 			var url = '/postings';
+
 			$http.get(url).success(function(data) {
 				$scope.posts = data;
 			});

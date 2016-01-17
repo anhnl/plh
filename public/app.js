@@ -1,7 +1,7 @@
-var plhApp = angular.module('plhApp', ['ngRoute', 'plhApp.homeController', 'plhApp.addController', 'plhApp.postsController']);
+var plhApp = angular.module('plhApp', ['ngRoute', 'plhApp.homeController', 'plhApp.addController', 'plhApp.postsController', 'plhApp.viewController']);
 
 plhApp.config(['$routeProvider',
-  function($routeProvider) {
+  function($routeProvider, $locationProvider) {
     $routeProvider.
     	when('/', {
     		templateUrl: 'templates/home.html',
@@ -14,6 +14,10 @@ plhApp.config(['$routeProvider',
       when('/posts', {
         templateUrl: 'templates/posts.html',
         controller: 'postsController'
+      }).
+      when('/posts/:id', {
+        templateUrl: 'templates/view.html',
+        controller: 'viewController'
       }).
 	    otherwise({
 	      redirectTo: '/'
