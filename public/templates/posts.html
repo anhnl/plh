@@ -1,5 +1,5 @@
 <div class="row">
   <div class="col-md-12 row" ng-repeat="post in posts | orderBy:'-updated_at' | filter:query">
-    <p>{{post.updated_at | date: 'MMM d'}} - <a href="#posts/{{post._id}}" class="post-title">{{post.title}}</a> - ({{post.city}})</p>
+    <p>{{post.updated_at | date: 'MMM d'}} - <a href="/posts/{{post._id}}" class="post-title">{{post.title}}</a> - ({{post.city}})</p>
   </div>
 </div>
