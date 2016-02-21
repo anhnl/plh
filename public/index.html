@@ -48,22 +48,22 @@
           <form class="navbar-form navbar-right" role="search">
             <div class="input-group">
               <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
-              <input type="text" class="form-control" ng-model="query" placeholder="Search...">
+              <input type="text" class="form-control" ng-model="query" placeholder="{{ 'SEARCH' | translate }}">
             </div>
           </form>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#home">Home <span class="sr-only">(current)</span></a></li>
-            <li><a href="#add"> Create a listing </a></li>
-            <li><a href="#posts"> View all posts </a></li>
+            <li><a href="#home">{{ 'HOME' | translate }}<span class="sr-only">(current)</span></a></li>
+            <li><a href="#add">{{ 'CREATE_LISTING' | translate }}</a></li>
+            <li><a href="#posts">{{ 'VIEW_POSTS' | translate }}</a></li>
             <li class="dropdown">
-              <a href="!" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Location <span class="caret"></span></a>
+              <a href="!" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ 'LOCATION' | translate }}<span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="#us">United States</a></li>
                 <li><a href="#vn">Viet Nam</a></li>
               </ul>
             </li>
             <li class="dropdown">
-              <a href="!" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Language <span class="caret"></span></a>
+              <a href="!" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ 'LANGUAGE' | translate }}<span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href ng-controller="homeController" ng-click="changeLanguage('en')">English <span class="flag-icon flag-icon-us"></span></a></li>
                 <li><a href ng-controller="homeController" ng-click="changeLanguage('vnm')">Vietnamese <span class="flag-icon flag-icon-vn"></span></a></li>
@@ -78,9 +78,9 @@
       <div class="col-md-2">
         <div class="bs-sidebar hidden-print affix well well-lg">
           <ul class="left-sidebar-nav nav nav-list">
-            <li><a href="#add">Create a listing</a></li>
-            <li><a href="#posts">View all posts</a></li>
-            <li><a href="#calendar">Calendar</a></li>
+            <li><a href="#add">{{ 'CREATE_LISTING' | translate }}</a></li>
+            <li><a href="#posts">{{ 'VIEW_POSTS' | translate }}</a></li>
+            <li><a href="#calendar">{{ 'CALENDAR' | translate }}</a></li>
             <li>
               <div id="calendar"></div>
             </li>

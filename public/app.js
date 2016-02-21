@@ -2,6 +2,13 @@ var plhApp = angular.module('plhApp', ['ngRoute','pascalprecht.translate', 'plhA
 
 plhApp.config(['$translateProvider', function ($translateProvider) {
   $translateProvider.translations('en', {
+    'HOME': 'Home',
+    'CREATE_LISTING': 'Create a listing',
+    'VIEW_POSTS': 'View all posts',
+    'LOCATION': 'Location',
+    'LANGUAGE': 'Language',
+    'SEARCH': 'Search...',
+    'CALENDAR': 'Calendar',
     'FOR_SALE': 'For Sale',
     'FOR_RENT': 'For Rent',
     'FASHION': 'Fashion',
@@ -33,10 +40,32 @@ plhApp.config(['$translateProvider', function ($translateProvider) {
     'VEHICLES_LOST_FOUND': 'Vehicles',
     'TRAVEL': 'Travel',
     'PLACE_TO_STAY': 'Place to Stay',
-    'TRAVEL_PARTNERS': 'Travel Partners'
+    'TRAVEL_PARTNERS': 'Travel Partners',
+    'CONTACT_DETAILS': 'Contact Details',
+    'NAME': 'Name',
+    'EMAIL': 'Email',
+    'PHONE': 'Phone',
+    'CITY': 'City',
+    'GENERAL_LOCATION': 'General Location',
+    'ITEM_DETAILS': 'Item Details',
+    'PRICE': 'Price',
+    'CONDITION': 'Condition',
+    'MAKE_MANUFACTURER': 'Make/Manufacturer',
+    'SIZE': 'Size',
+    'COLOR': 'Color',
+    'TITLE': 'Title',
+    'POSTING': 'Posting',
+    'SUBMIT': 'Submit'
   });
 
   $translateProvider.translations('vnm', {
+    'HOME': 'Trang Chủ',
+    'CREATE_LISTING': 'Đăng Bài',
+    'VIEW_POSTS': 'Xem Tất Cả',
+    'LOCATION': 'Địa Điểm',
+    'LANGUAGE': 'Ngôn Ngữ',
+    'SEARCH': 'Tìm Kiếm...',
+    'CALENDAR': 'Lịch',
     'FOR_SALE': 'Mua Bán',
     'FOR_RENT': 'Cho Thuê',
     'FASHION': 'Thời Trang',
@@ -59,7 +88,7 @@ plhApp.config(['$translateProvider', function ($translateProvider) {
     'TEMPORARY_SEASONAL': 'Tuyển Ngắn Hạn',
     'ASSISTS': 'Phụ Tá',
     'TUTORING': 'Dạy Thêm',
-    'VOLUNTEER': 'Volunteer',
+    'VOLUNTEER': 'Tình Nguyện',
     'LONG_TERM': 'Dài Hạn',
     'TEMPORARY': 'Tạm Thời',
     'LOST_FOUND': 'Mất Đồ/Cớ Mất',
@@ -68,7 +97,22 @@ plhApp.config(['$translateProvider', function ($translateProvider) {
     'VEHICLES_LOST_FOUND': 'Xe Cộ',
     'TRAVEL': 'Du Lịch/Phượt',
     'PLACE_TO_STAY': 'Chỗ Ở Nhờ',
-    'TRAVEL_PARTNERS': 'Người Đi Cùng'
+    'TRAVEL_PARTNERS': 'Người Cùng Đi',
+    'CONTACT_DETAILS': 'Thông Tin Liên Lạc',
+    'NAME': 'Tên',
+    'EMAIL': 'Email',
+    'PHONE': 'Điện Thoại',
+    'CITY': 'Thành Phố',
+    'GENERAL_LOCATION': 'Nơi Giao Dịch',
+    'ITEM_DETAILS': 'Chi Tiết',
+    'PRICE': 'Giá',
+    'CONDITION': 'Tình Trạng',
+    'MAKE_MANUFACTURER': 'Nhãn Hiệu/Nhà Sản Xuất',
+    'SIZE': 'Kích Cỡ',
+    'COLOR': 'Màu Sắc',
+    'TITLE': 'Tên Bài Đăng',
+    'POSTING': 'Nội Dung',
+    'SUBMIT': 'Đăng'
   });
 
   $translateProvider.preferredLanguage('vnm');
